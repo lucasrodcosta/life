@@ -1,11 +1,3 @@
-height = 35
-width = 70
-
-ambient = Ambient.new(height, width)
-90.times do |i|
-  ambient.insert_cell( Cell.new, Random.rand(height), Random.rand(width) )
-end
-
 def run(ambient)
   100.times do |i|
     system('clear')
@@ -15,6 +7,15 @@ def run(ambient)
       cell.move
     end
   end
+end
+
+
+height = 35
+width = 70
+
+ambient = Ambient.new(height, width)
+90.times do |i|
+  ambient.insert_cell( Cell.new, Random.rand(height), Random.rand(width) )
 end
 
 run(ambient)
